@@ -24,6 +24,8 @@
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
     "@angular/service-worker": "~11.1.2",
+    "@azure/msal-angular": "^2.0.0",
+    "@azure/msal-browser": "^2.14.2",
     "http-server": "^0.12.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
