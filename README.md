@@ -1,8 +1,6 @@
 # Azue B2C Login 
 
-
-
-
+# Based on [Angular single-page application using MSAL Angular to sign-in users against Azure AD B2C](https://github.com/Azure-Samples/ms-identity-javascript-angular-tutorial/blob/main/1-Authentication/2-sign-in-b2c/README.md)
 ## Libraries:
 
 ### [Angular Material](https://material.angular.io/guide/getting-started)
