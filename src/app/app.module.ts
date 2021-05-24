@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
