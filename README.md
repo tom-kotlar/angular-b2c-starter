@@ -1,4 +1,29 @@
-# GuardedSheLogin
+# Azue B2C Login 
+
+
+
+
+## Libraries:
+
+### [Angular Material](https://material.angular.io/guide/getting-started)
+? Choose a prebuilt theme name, or "custom" for a custom theme: Custom
+? Set up global Angular Material typography styles? Yes
+? Set up browser animations for Angular Material? Yes
+
+### [Angular Service Worker](https://angular.io/guide/service-worker-getting-started)
+### [http-server](https://github.com/http-party/http-server)
+
+
+### [Microsoft Authentication Library for Angular](https://www.npmjs.com/package/@azure/msal-angular)
+### [Microsoft Authentication Library for JavaScript (MSAL.js) 2.0 for Browser-Based Single-Page Applications](https://www.npmjs.com/package/@azure/msal-browser)
+
+
+## Docs:
+
+### [Azure Active Directory B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
+### [flex-layout](https://github.com/angular/flex-layout/wiki)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
