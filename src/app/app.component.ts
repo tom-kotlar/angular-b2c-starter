@@ -1,10 +1,10 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-
-import { MSAL_GUARD_CONFIG, MsalGuardConfiguration, MsalService, MsalBroadcastService } from '@azure/msal-angular';
-import { InteractionStatus, RedirectRequest, PopupRequest, InteractionType, AuthenticationResult } from '@azure/msal-browser';
-
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
+
+import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfiguration } from '@azure/msal-angular';
+import { EventMessage, EventType, InteractionType, InteractionStatus, PopupRequest, RedirectRequest, AuthenticationResult, AuthError } from '@azure/msal-browser';
+
 import { b2cPolicies } from './auth-config';
 
 @Component({
@@ -12,12 +12,11 @@ import { b2cPolicies } from './auth-config';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy  {
-  title = 'guarded-she-login';
+export class AppComponent implements OnInit, OnDestroy {
+  title = 'Microsoft identity platform';
   isIframe = false;
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
-
 
   constructor(
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
@@ -85,6 +84,4 @@ export class AppComponent implements OnInit, OnDestroy  {
     this._destroying$.next(undefined);
     this._destroying$.complete();
   }
-
-
 }

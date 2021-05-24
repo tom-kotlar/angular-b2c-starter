@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 
 import { MaterialModule } from './material/material.module';
 
+import { HttpClientModule } from '@angular/common/http';
 import { IPublicClientApplication, PublicClientApplication, InteractionType } from '@azure/msal-browser';
 import { MsalGuard, MsalBroadcastService, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular';
 
@@ -42,7 +43,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     GuardedComponent
   ],
   imports: [
-    MsalModule,
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -53,7 +54,8 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
       registrationStrategy: 'registerWhenStable:30000'
     }),
     MaterialModule,
-
+    HttpClientModule,
+    MsalModule
   ],
   providers: [  {
     provide: MSAL_INSTANCE,
@@ -67,6 +69,6 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
   MsalGuard,
   MsalBroadcastService],
 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, MsalRedirectComponent]
 })
 export class AppModule { }
